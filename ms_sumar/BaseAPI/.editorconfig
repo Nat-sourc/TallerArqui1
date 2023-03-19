@@ -1,0 +1,10 @@
+﻿[*.cs]
+
+# CA1051: No declarar campos de instancia visibles
+dotnet_diagnostic.CA1051.severity = none
+
+# Default severity for analyzer diagnostics with category 'Style'
+dotnet_analyzer_diagnostic.category-Style.severity = none
+
+# CS8629: Un tipo que acepta valores NULL puede ser nulo.
+dotnet_diagnostic.CS8629.severity = none

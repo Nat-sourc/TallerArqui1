@@ -1,0 +1,56 @@
+{
+  "Logging": {
+    "LogLevel": {
+      "Default": "Information",
+      "System": "Information",
+      "Microsoft": "Warning",
+      "Microsoft.AspNetCore": "Warning"
+    }
+  },
+  "Serilog": {
+    "MinimumLevel": {
+      "Default": "Debug",
+      "Override": {
+        "System": "Information",
+        "Microsoft": "Information"
+      }
+    },
+    "WriteTo": [
+      {
+        "Name": "Console"
+      },
+      {
+        "Name": "File",
+        "Args": {
+          "path": "/home/bv/logAppBase.txt",
+          "rollingInterval": "Day"
+        }
+      },
+      {
+        "Name": "MongoDB",
+        "Args": {
+          "databaseUrl": "mongodb://mongo:mongo123@clusterlog-shard-00-00.x64zv.mongodb.net:27017,clusterlog-shard-00-01.x64zv.mongodb.net:27017,clusterlog-shard-00-02.x64zv.mongodb.net:27017/dblog?replicaSet=atlas-io9orj-shard-0&ssl=true&authSource=admin",
+          "collectionName": "LogBaseCollection",
+          "cappedMaxSizeMb": "1024",
+          "cappedMaxDocuments": "50000"
+        }
+      }
+    ]
+  },
+  "AllowedHosts": "*",
+  "ConnectionStrings": {
+    "DBCenitConnection": "Data Source=34.125.169.6, 1433;Initial Catalog=BDCENIT2;Persist Security Info=True;User ID=sa;Password=B4r344V3r1t4s"
+  },
+  "JwtConfig": {
+    "Secret": "El_@mor_es_p@ciente,_es_bond@doso._El_@mor_no_es_envidioso_ni_j@ct@ncioso_ni_orgulloso._No_se_comport@_con_rudez@,_no_es_egoist@,_no_se_enoj@_f@cilmente,_no_gu@rd@_rencor."
+  },
+  "BureauVeritasConfig": {
+    "UploadPath": {
+      "PAPImages": "/home/bv/upload/PAPImages/",
+      "KLMFiles": "/home/bv/upload/KLMFiles/",
+      "CIPSFiles": "/home/bv/upload/CIFSFiles/",
+	  "DCVGFiles": "/home/bv/upload/DCVGFiles/",
+      "SUELOSFiles": "/home/bv/upload/SUELOSFiles/"
+    }
+  }
+}
