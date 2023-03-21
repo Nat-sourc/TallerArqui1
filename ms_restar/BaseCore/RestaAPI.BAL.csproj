@@ -1,0 +1,22 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+	<GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+	<GenerateAssemblyAttributes>false</GenerateAssemblyAttributes>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="ClosedXML" Version="0.95.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\BaseAbstraccion\RestaAPI.Abstraction.csproj" />
+    <ProjectReference Include="..\BaseEntidades\RestaAPI.Entity.csproj" />
+    <ProjectReference Include="..\BaseRepositorio\RestaAPI.Repository.csproj" />
+    <ProjectReference Include="..\BaseServicios\RestaAPI.Services.csproj" />
+  </ItemGroup>
+
+</Project>
