@@ -42,7 +42,7 @@ builder.Services.AddCors(options =>
                           builder
                             .AllowAnyHeader()
                             .WithMethods("POST", "GET", "PUT", "DELETE")
-                            .WithOrigins("http://localhost:4200") // Parametrizar
+                            .WithOrigins("http://localhost:8080") // Parametrizar
                             .AllowCredentials();
                       });
 });
